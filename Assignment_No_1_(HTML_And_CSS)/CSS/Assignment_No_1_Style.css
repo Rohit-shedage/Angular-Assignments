@@ -1,0 +1,100 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+header{
+	display: flex;
+
+	height: 80px;
+}
+
+header div{
+	flex: 1;
+}
+header div img{
+	height: 80px;
+	
+}
+
+.NavBar{
+	flex: 4;
+	justify-content: space-around;
+	
+}
+
+.NavBar ul{
+	display: flex;
+
+}
+
+.NavBar ul li{
+	margin: 25px;
+	flex: 1;
+	list-style: none;
+
+}
+
+.Slider{
+
+	height: 100%;
+}
+
+.Slider img{
+	width: 100%;
+}
+
+.R1{
+	display: flex;
+}
+
+.R1 img{
+	width: 100%;
+	height: 100px;
+	flex: 1;
+}
+
+.R1 p{
+	background-color: black;	
+	flex: 3;
+	color: white;
+	font-size: 20px;
+	padding: : 20px;
+	margin: 25px;
+	
+}
+.R2{
+	display: flex;
+}
+
+.R2 img{
+	width: 100%;
+	height: 100px;
+	flex: 1;
+}
+.R2 p{
+	background-color: black;	
+	flex: 3;
+	color: white;
+	font-size: 20px;
+	padding: : 20px;
+	margin: 25px;
+
+}
+
+a{
+	text-decoration: none;
+}
+
+footer{
+	height: 50px;	
+	background-color: black;
+
+}
+
+footer p{
+    margin: 35px;
+    color: white;
+	text-align: center;
+	align-items: center;
+}
