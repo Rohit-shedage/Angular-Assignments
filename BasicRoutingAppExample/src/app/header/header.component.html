@@ -1,0 +1,30 @@
+<header>
+    <div>
+        <img src="./assets/Images/Logo_Butterfly.png" alt="Butterfly">
+    </div>
+    <nav>
+        <ul>
+           <!--  <li>
+                <a href="#" routerLink="">Home</a>
+            </li>
+            <li>
+                <a href="#" routerLink="about">About</a>
+            </li>
+            <li>
+                <a href="#" routerLink="services">Services</a>
+            </li>
+            <li>
+                <a href="#" routerLink="client">Client</a>
+            </li>
+            <li>
+                <a href="#" routerLink="blog">Blog</a>
+            </li>
+            <li>
+                <a href="#" routerLink="contact">Contact</a>
+            </li> -->
+            <li *ngFor="let menu of menus">
+                <a href="#" routerLink='{{menu.link}}'>{{menu.name}}</a>
+           </li>
+        </ul>
+    </nav>
+ </header>
