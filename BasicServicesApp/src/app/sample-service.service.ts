@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class SampleServiceService {
 
-  constructor() { }
+  constructor(private httpclient:HttpClient ) {}
 
   ProductList(){
-    let product = [
+   /*  let product = [
       {
         name:'Asus',
         model:'1111'
@@ -27,6 +29,7 @@ export class SampleServiceService {
       }
     ];
 
-    return product;
+    return product; */
+     return this.httpclient.get('https://fakestoreapi.com/products');
   }
 }

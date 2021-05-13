@@ -8,10 +8,19 @@ import { SampleServiceService } from '../sample-service.service';
 })
 export class ServicesComponent implements OnInit {
 
+  products:any;
   constructor(private SSPObj: SampleServiceService) { }
 
   ngOnInit(){
-    console.log(this.SSPObj.ProductList());
+    
+    this.SSPObj.ProductList().subscribe((data) =>{
+      //this.products =  data;
+      this.products = data;
+      console.log(this.products);
+    })
+
+    //console.log(this.SSPObj.ProductList());
+    
   }
 
 }
