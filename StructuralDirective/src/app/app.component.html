@@ -1,0 +1,103 @@
+<div style="text-align: center;">
+  <h3>ngIF else Directive</h3>
+
+  <div *ngIf="ValueIsEmpty; else showing">If Value Is Empty Display This</div>
+  <ng-template #showing>
+    Showing Else Block Value Is Empty
+  </ng-template>
+
+  <h3>ngIF then else Directive</h3>
+
+  <div *ngIf="ValueIsEmpty; then thenblock; else showing">If Value Is Empty Display This</div>
+
+  <ng-template #thenblock>
+    Showing then Block Value Is Empty TRUE
+  </ng-template>
+
+  <ng-template #showing>
+    Showing Else Block Value Is Empty FALSE
+  </ng-template>
+
+  <h3>Logical Operator in ngIF Directive</h3>
+
+  <div *ngIf="!(Value1 == 20 && Value2 == 30)">If Value1 And Value2 Are Equal To 20 And 30</div>
+
+  <h3>ngFor Directive </h3>
+
+  <ul>
+    <li *ngFor="let contact of contacts; index as i;first as f;last as l">
+      <!--  <div>This Is First Index</div> -->
+      <div *ngIf="f" style="background-color: aqua;">
+        {{i}} {{contact.FirstName}} {{contact.LastName}}
+      </div>
+      <div *ngIf="l; else Down" style="background-color: red;">
+        {{i}} {{contact.FirstName}} {{contact.LastName}}
+      </div>
+      <ng-template #Down>{{i}} {{contact.FirstName}} {{contact.LastName}}</ng-template>
+    </li>
+  </ul>
+
+  <h3>ngFor Even And Odd Directive </h3>
+
+  <ul>
+    <li *ngFor="let model of Models; even as e; odd as o">
+      <div *ngIf="e" style="background-color: #dddd;">
+        {{model.Name}} {{model.Price}} {{model.City}}
+      </div>
+      <div *ngIf="o" style="background-color: aqua;">
+        {{model.Name}} {{model.Price}} {{model.City}}
+      </div>
+    </li>
+  </ul>
+
+  <h4>ngSwitch Directive</h4>
+
+  <div [ngSwitch]="Switch_Value">
+    <div *ngSwitchCase="'C_Programing'" style="background-color: silver;"> C Progmming</div>
+    <div *ngSwitchCase="'JAVA_Programing'" style="background-color: silver;">JAVA Progmming</div>
+    <div *ngSwitchDefault style="background-color: silver;">There Is No Programming Language Mention</div>
+  </div>
+
+  <div style="position: relative;margin-top: 4em;">
+    <h3>ngStyle Arttibute Directive Demostration</h3>
+    <div [ngStyle]="{'background-color' : 'aqua','font-size':'60px'}">This is Basic Inline Style</div>
+  </div>
+  <div style="margin-top: 4em;">
+    <h3>ngStyle Arttibute Directive Demostration</h3>
+    <div [ngStyle]="{'background-color' : DynamicStyle,'font-size':DynamicStyleFont}">This is Dynamic Inline Style</div>
+  </div>
+
+  <div style="margin-top: 4em;">
+    <h3>ngStyle Arttibute Directive Demostration</h3>
+    <div [ngStyle]="{'color' : DynamicStyle == 'blue' ? 'purple' : 'red' ,'font-size':DynamicStyleFont}">This is Dynamic
+      Inline Style</div>
+  </div>
+
+</div>
+
+<div style="position: relative;margin-top: 4em;">
+  <h3>ngClass Arttibute Directive Demostration</h3>
+  <div [ngClass]="'C1'">This is Basic Inline Class</div>
+
+  <div style="margin-top: 4em;">
+    <h3>ngClass Arttibute Directive Demostration</h3>
+    <div [ngClass]="'C1 C2'">This is Multiple Classes Exaples</div>
+
+  </div>
+  <div style="margin-top: 4em;">
+    <h3>ngClass Arttibute Directive Demostration</h3>
+    <div [ngClass]="ClassDynamic">This is Dynamic Class Example</div>
+  </div>
+
+  <div style="margin-top: 4em;">
+    <h3>ngClass Arttibute Directive Demostration</h3>
+    <div [ngClass]="ClassDynamic">This is Dynamic Class Example</div>
+  </div>
+
+  <div style="margin-top: 4em;">
+    <h3>ngClass Arttibute Directive Demostration</h3>
+    <div [ngClass]="ClassDynamicCon === 'C3' ? 'C3' : 'C4' ">This is Dynamic Class Example</div>
+  </div>
+
+
+</div>
