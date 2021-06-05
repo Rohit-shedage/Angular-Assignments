@@ -1,0 +1,55 @@
+<style>
+  div{
+    border: 1px solid lightgray;
+    margin: 80px;
+  }
+  .Heading{
+    box-sizing: 50px;
+    border: 1px solid red;
+    text-align:  center;
+  }
+</style>
+
+
+<div>
+  <h1 class="Heading">One Way DataBinding</h1>
+  <div class="Interpolation">
+    <h3 class="Heading">Interpolation</h3>
+    <p>{{ Name }}</p>
+    <p>{{ UserNameObj.FN }} {{ UserNameObj.LN }} {{ UserNameObj.str }}</p>
+  </div>
+  <div class="Property">
+    <h3 class="Heading">Property Binding</h3>
+    <p [innerHTML]="Name2"></p>
+    <p [title]="UserNameObj.FN"  [title]=" UserNameObj.LN ">{{ UserNameObj.FN }} {{ UserNameObj.LN }} {{ UserNameObj.str }}</p>
+    <img [src]="Link" [alt]="alt">
+  </div>
+  <div class="Attribute">
+    <h3 class="Heading">Attribute Binding</h3>
+    <table>
+      <tr>
+        <td>Contact</td>
+        <td> Contact Name</td>
+        <td>Contact Address</td>
+      </tr>
+      <tr>
+        <td [attr.colspan]="ColVal">{{ UserName2Obj.FN }}</td>
+        <!-- <td> {{ UserName2Obj.LN }}</td> -->
+        <td>{{ UserName2Obj.str }}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="Event">
+    <h3 class="Heading">Event Binding</h3>
+    <button (click)="SayHello()">Click</button>
+    <button (mouseover)="SayHelloMO()">Mouse Over</button>
+  </div>
+</div>
+
+<div>
+  <div class="TwoWayBinding">
+    <h3 class="Heading">Two Way Binding Binding</h3>
+    <input [(ngModel)]="Data" />
+    <p>{{ Data }}</p>
+  </div>
+</div>
