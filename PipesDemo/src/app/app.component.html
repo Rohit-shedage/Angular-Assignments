@@ -1,0 +1,106 @@
+<!-- Angular Built-In Pipes -->
+<style>
+  h2 {
+   /*  position: relative; */
+    /* justify-content: center; */
+    text-align: center;
+  }
+  div{
+    display: block;
+    
+    /* height: 200px; */
+   /* justify-items: center; */
+   /*  width: 200px; */
+    border: 1px solid grey;
+    padding: 5px;
+    margin-top: 5px;
+    text-align: center;
+  }
+</style>
+<h2>Built-In Pipes</h2>
+<div>
+  <h4>lowercase Built-In Pipes</h4>
+  <p>{{ LowercaseExample | lowercase }}</p>
+</div>
+
+<div>
+  <h4>upperercase Built-In Pipes</h4>
+  <p>{{ UppercaseExample | uppercase }}</p>
+</div>
+
+<div>
+  <h4>Date Built-In Pipes</h4>
+  <p>{{ DateExample | date }}</p>
+</div>
+
+<div>
+  <h4>Currency Built-In Pipes</h4>
+  <p>{{ CurrencyExample | currency }}</p>
+  <p>Default Value is DOLLAR</p>
+</div>
+
+<div>
+  <h4>Percent Built-In Pipes</h4>
+  <p>{{ PercentExample | percent }}</p>
+  <p>It Gives % Symbol And Average Percentage</p>
+</div>
+
+<div>
+  <h4>JSON Built-In Pipes</h4>
+  <p>{{ JSONExample | json }}</p>
+  <p>It Gives JSON Type Printing</p>
+</div>
+
+<!-- Angular Parameterized Pipes -->
+
+<h2>Parameterized Pipes</h2>
+<div>
+  <h4>Date Built-In Pipes</h4>
+  <p>{{ DateExample | date : 'short'}}</p>
+  <p>SHORT Parameter To Date</p>
+  <p>{{ DateExample | date : 'medium'}}</p>
+  <p>MEDIUM Parameter To Date</p>
+  <p>{{ DateExample | date : 'full'}}</p>
+  <p>FULL Parameter To Date</p>
+  <p>{{ DateExample | date : 'MM-dd-yyyy'}}</p>
+  <p>'MM-dd-yyyy' Parameter To Date</p>
+</div>
+
+<div>
+  <h4>Currency Parameterized Pipes</h4>
+  <p>{{ CurrencyExample | currency :'INR' }}</p>
+  <p>Giving Parameter Value is INR Indian Currency</p>
+  <p>{{ CurrencyExample | currency :'EUR' }}</p>
+  <p>Giving Parameter Value is EUR Austria Currency</p>
+  <p>{{ CurrencyExample | currency :'USD' }}</p>
+  <p>Giving Parameter Value is USD America Currency</p>
+</div>
+
+<div>
+  <h4>Percent Parameterized Pipes</h4>
+  <p>{{ PercentExample | percent : '3.4-4'}}</p>
+  <p>It Gives % Symbol And Average Percentage</p>
+</div>
+
+<!-- Angular Chaining Pipes -->
+
+<h2>Chaining Pipes</h2>
+<div>
+  <h4>Date Chaining Pipes</h4>
+  <p>{{ DateExample | date | uppercase}}</p>
+  <p>Chaining Means We Can Add Multiple Pipes</p>
+</div>
+
+<div>
+  <h4>JSON Chaining Pipes</h4>
+  <p>{{ JSONExample | json | uppercase}}</p>
+  <p>It Gives JSON Type Printing And UpperCase</p>
+  <p>{{ JSONExample | json | lowercase}}</p>
+  <p>It Gives JSON Type Printing And LowerCase</p>
+</div>
+
+<h2>Custom Pipes</h2>
+<div>
+  <h4>Custom Pipes</h4>
+  <h4> Square Root Of 25 = {{ '25' | samplePipe}}</h4>
+</div>
